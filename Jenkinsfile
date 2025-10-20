@@ -1,6 +1,3 @@
-
-properties(
-    //[parameters([string(defaultValue: '4111111111111111', name: 'cardNumber')])])
 node('dev')
 {
    def cardNumber = input message: 'Introduzca el número de tarjeta: ', parameters: [string(defaultValue: '4111111111111111', name: 'cardNumber')]
