@@ -1,10 +1,9 @@
 
 properties(
-    def cardNumber = input 'Introduzca el número de tarjeta: '
     //[parameters([string(defaultValue: '4111111111111111', name: 'cardNumber')])])
 node('dev')
 {
-   
+   def cardNumber = input message: 'Introduzca el número de tarjeta: ', parameters: [string(defaultValue: '4111111111111111', name: 'cardNumber')]
    stage('Get GIT repository')
    {
     git branch: 'main', url: 'https://github.com/ApasoftTraining/jenkins-script2.git'
