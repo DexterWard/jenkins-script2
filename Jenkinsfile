@@ -1,6 +1,7 @@
 
 properties(
-    [parameters([string(defaultValue: '4111111111111111', name: 'cardNumber')])])
+    def cardNumber = input 'Introduzca el número de tarjeta: '
+    //[parameters([string(defaultValue: '4111111111111111', name: 'cardNumber')])])
 node('dev')
 {
    
